@@ -13,7 +13,7 @@ def to_segments(df, column, size = 24):
     return val[:size*(val.size//size)].reshape(-1,size)
 
 
-df = pd.read_csv('/home/petr/project/datasets/data.csv', index_col='timestamp', parse_dates=True)
+df = pd.read_csv('/home/diza/project/datasets/data.csv', index_col='timestamp', parse_dates=True)
 
 # Формируем датасет с почасовой статистикой
 data = df.groupby(pd.Grouper(freq='1h')).sum()
@@ -37,4 +37,4 @@ data_p['y'] = np.concatenate((
                     1*np.ones(week_end.shape[0]),
                    ))
 
-data_p.to_csv('/home/petr/project/datasets/data_processed.csv') 
+data_p.to_csv('/home/diza/project/datasets/data_processed.csv') 

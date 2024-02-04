@@ -7,11 +7,11 @@ nano test.py
 ls -la
 sudo chmod 777 *
 ls -la
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 python3 test.py
 test.py
 python3 test.py
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 python3 test.py
 ls -la
 cd ..
@@ -29,7 +29,7 @@ cd airflow
 airflow scheduler
 y
 airflow scheduler
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow scheduler
 mkdir project
 cd project
@@ -47,13 +47,13 @@ python3 -m venv venv
 source venv/bin/acivate
 source venv/bin/activate
 sudo apt-get update -y && sudo apt-get install software-properties-common -y && sudo apt-get install python-setuptools -y && sudo apt install python3-pip -y && sudo apt install libpq-dev -y && sudo apt install postgresql -y && sudo pip install psycopg2
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 cd airflow
 pip install apache-airflow
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow db init
 sudo -u postgres psql
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow db upgrade
 airflow db init
 sudo pip install psycopg2
@@ -111,7 +111,7 @@ pwd
 airflow list_dags
 airflow dags
 airflow dags list
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow dags list
 cd >>
 cd ..
@@ -122,20 +122,20 @@ sudo apt install libpq-dev -y && sudo apt install gcc -y
 sudo pip install mlflow
 sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-all
 sudo -u postgres psql
-mlflow server --backend-store-uri postgresql://mlflow:mlflow@localhost/mlflow --default-artifact-root file:/home/petr/project/mlflow
-export AIRFLOW_HOME=/home/petr/project/airflow
+mlflow server --backend-store-uri postgresql://mlflow:mlflow@localhost/mlflow --default-artifact-root file:/home/diza/project/mlflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 cd project
 source venv/bin/activate
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow webserver -p 8080
 cd project
 source venv/bin/activate
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow scheduler
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow scheduler
 source venv/bin/activate
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow webserver -p 8080
 sudo pip uninstall tsai
 cd project
@@ -173,9 +173,9 @@ ls
 python3 test_model.py
 cd ..
 airflow scheduler
-export AIRFLOW_HOME=/home/petr/project/airflow
+export AIRFLOW_HOME=/home/diza/project/airflow
 airflow scheduler
-git config --global user.name "Petr"
+git config --global user.name "diza"
 git config --global user.email "gapeal@mail.ru"
 git init
 git status
@@ -198,9 +198,9 @@ $ ssh-keygen -t rsa
 ssh-keygen -t rsa
 $ cat ~/.ssh/id_rsa.pub
 cat ~/.ssh/id_rsa.pub
-git remote add origin git@github.com:PetrGavrilin/MLOPS-33.git
+git remote add origin git@github.com:dizaGavrilin/MLOPS-33.git
 git branch -M main
 git push -u origin main
 cd ..
-mlflow server --backend-store-uri postgresql://mlflow:mlflow@localhost/mlflow --default-artifact-root file:/home/petr/project/mlflow -h 0.0.0.0 -p 5000
+mlflow server --backend-store-uri postgresql://mlflow:mlflow@localhost/mlflow --default-artifact-root file:/home/diza/project/mlflow -h 0.0.0.0 -p 5000
 sudo -i

@@ -10,7 +10,7 @@ from mlflow.tracking import MlflowClient
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("train_model")
 
-train = pd.read_csv('/home/petr/project/datasets/data_train.csv')
+train = pd.read_csv('/home/diza/project/datasets/data_train.csv')
 
 y_train = train['y'].astype('int').values
 X_train = train.drop('y', axis=1).values
@@ -24,11 +24,11 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model,
                              artifact_path="stfc",
                              registered_model_name="stfc")
-    mlflow.log_artifact(local_path="/home/petr/project/scripts/train_model.py",
+    mlflow.log_artifact(local_path="/home/diza/project/scripts/train_model.py",
                         artifact_path="train_model code")
     mlflow.end_run()
 
 model.fit(X_train, y_train)
 
-with open('/home/petr/project/models/data.pickle', 'wb') as f:
+with open('/home/diza/project/models/data.pickle', 'wb') as f:
     pickle.dump(model, f)

@@ -1,12 +1,12 @@
 airflow
 mlflow
-pendulum
 datetime
+pendulum
 pandas
 numpy
 requests
-pyGitHub
 warnings
+pyGitHub
 pickle
-sktime
 json
+sktime
