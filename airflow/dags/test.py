@@ -4,9 +4,9 @@ from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 
 def print_hello():
-    return 'Hello world from first Airflow DAG!'
+    return 'Airflow DAG!'
 
-dag = DAG('hello_world', description='Hello World DAG',
+dag = DAG('Airflow', description='DAG',
           schedule='0 12 * * *',
           start_date=datetime(2017, 3, 20), catchup=False)
 
