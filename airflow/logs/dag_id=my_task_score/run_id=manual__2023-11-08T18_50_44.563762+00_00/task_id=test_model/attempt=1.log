@@ -8,7 +8,7 @@
 [2023-11-08T21:52:31.616+0300] {task_command.py:416} INFO - Running <TaskInstance: my_task_score.test_model manual__2023-11-08T18:50:44.563762+00:00 [running]> on host MLOPS-3-3.myguest.virtualbox.org
 [2023-11-08T21:52:31.902+0300] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='admin' AIRFLOW_CTX_DAG_ID='my_task_score' AIRFLOW_CTX_TASK_ID='test_model' AIRFLOW_CTX_EXECUTION_DATE='2023-11-08T18:50:44.563762+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-08T18:50:44.563762+00:00'
 [2023-11-08T21:52:31.904+0300] {subprocess.py:63} INFO - Tmp dir root location: /tmp
-[2023-11-08T21:52:31.907+0300] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /home/petr/project/scripts/test_model.py']
+[2023-11-08T21:52:31.907+0300] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /home/diza/project/scripts/test_model.py']
 [2023-11-08T21:52:31.923+0300] {subprocess.py:86} INFO - Output:
 [2023-11-08T21:52:35.764+0300] {subprocess.py:93} INFO - 0.8666666666666667
 [2023-11-08T21:52:36.271+0300] {subprocess.py:97} INFO - Command exited with return code 0

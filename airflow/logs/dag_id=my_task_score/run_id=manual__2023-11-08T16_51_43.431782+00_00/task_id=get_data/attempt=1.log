@@ -8,16 +8,16 @@
 [2023-11-08T19:51:58.137+0300] {task_command.py:416} INFO - Running <TaskInstance: my_task_score.get_data manual__2023-11-08T16:51:43.431782+00:00 [running]> on host MLOPS-3-3.myguest.virtualbox.org
 [2023-11-08T19:51:58.494+0300] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='admin' AIRFLOW_CTX_DAG_ID='my_task_score' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2023-11-08T16:51:43.431782+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-08T16:51:43.431782+00:00'
 [2023-11-08T19:51:58.496+0300] {subprocess.py:63} INFO - Tmp dir root location: /tmp
-[2023-11-08T19:51:58.508+0300] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /home/petr/project/scripts/get_data.py']
+[2023-11-08T19:51:58.508+0300] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /home/diza/project/scripts/get_data.py']
 [2023-11-08T19:51:58.548+0300] {subprocess.py:86} INFO - Output:
 [2023-11-08T19:51:59.335+0300] {subprocess.py:93} INFO - Traceback (most recent call last):
-[2023-11-08T19:51:59.335+0300] {subprocess.py:93} INFO -   File "/home/petr/project/scripts/get_data.py", line 11, in <module>
+[2023-11-08T19:51:59.335+0300] {subprocess.py:93} INFO -   File "/home/diza/project/scripts/get_data.py", line 11, in <module>
 [2023-11-08T19:51:59.336+0300] {subprocess.py:93} INFO -     from github import Github
-[2023-11-08T19:51:59.336+0300] {subprocess.py:93} INFO - ImportError: cannot import name 'Github' from 'github' (/home/petr/project/venv/lib/python3.10/site-packages/github/__init__.py)
+[2023-11-08T19:51:59.336+0300] {subprocess.py:93} INFO - ImportError: cannot import name 'Github' from 'github' (/home/diza/project/venv/lib/python3.10/site-packages/github/__init__.py)
 [2023-11-08T19:51:59.440+0300] {subprocess.py:97} INFO - Command exited with return code 1
 [2023-11-08T19:51:59.488+0300] {taskinstance.py:1937} ERROR - Task failed with exception
 Traceback (most recent call last):
-  File "/home/petr/project/venv/lib/python3.10/site-packages/airflow/operators/bash.py", line 210, in execute
+  File "/home/diza/project/venv/lib/python3.10/site-packages/airflow/operators/bash.py", line 210, in execute
     raise AirflowException(
 airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
 [2023-11-08T19:51:59.498+0300] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=my_task_score, task_id=get_data, execution_date=20231108T165143, start_date=20231108T165157, end_date=20231108T165159
